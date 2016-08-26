@@ -1,0 +1,3 @@
+## Infrastructure Management
+
+Siri understands how critical your IT infrastructure for smooth functioning of business and we make it our job to ensure that it runs efficiently with zero service disruption time. Siri has demonstrated its ability to deliver a responsive Infrastructure Management Services to its clients and our evolutionary engagement models and consultative partnership approach have helped clients in cost reduction, resource optimization and technology alignment.

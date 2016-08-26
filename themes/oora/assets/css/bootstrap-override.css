@@ -1,0 +1,271 @@
+
+/* to center align the image */
+.img-responsive {
+    margin: 0 auto;
+}
+
+.navbar-brand {
+	padding: 5px 0px 5px;
+}
+
+@media (min-width: 769px) {
+
+	.navbar-default {
+		font: normal normal normal normal 15px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;
+		/*background: rgba(22, 31, 37, 0.96);
+		color: #fff;*/
+		/*text-transform: uppercase;*/
+		border: none;
+		/*box-shadow: 0px 0px 1px rgba(0,0,0,0.9);*/
+		/*background-image: linear-gradient(to top, rgb(62, 86, 112) 0%, rgb(69, 94, 122) 100%)*/;
+		background: white ! important;
+		border-color: gray;
+		/*border-bottom: solid 1px;  */  
+	}
+
+	.navbar-default .navbar-nav > .dropdown > a .caret,
+	.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+	.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+		/*border-top-color: #fff;
+		border-bottom-color: #fff;*/
+	}
+
+	.navbar > .container .navbar-brand {
+		margin-left: 0;
+		margin-right: 15px;
+	}
+
+	.navbar .nav > li > a {
+		/*color: #fff;*/
+	}
+
+	.navbar-default .navbar-brand,
+	.navbar-default .navbar-brand:hover,
+	.navbar-default .navbar-brand:focus {
+		/*color: #fff;*/
+	}
+
+	.navbar .nav > .active {
+	}
+
+	.navbar .nav > .active > a,
+	.navbar .nav > .active > a:hover,
+	.navbar .nav > .active > a:focus,
+	.navbar .nav li.dropdown.active > .dropdown-toggle,
+	.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+		/*background: rgba(235,245,255,0.15);*/
+		/*color: #fff;*/
+		/*height: 65px;*/
+	}
+
+	.navbar .nav > li > a:focus,
+	.navbar .nav > li > a:hover,
+	.navbar .nav li.dropdown.open > .dropdown-toggle {
+		color: rgb(255, 255, 255);
+		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
+		border: 0px none rgb(49, 163, 221);
+		border-radius: 20px 20px 20px 20px;		
+		list-style: none outside none;		
+		/*padding: 4px 20px 6px;*/
+		transition: all 0.1s ease-in-out 0s;
+	}
+
+
+	.dropdown-menu {
+		border-radius: 0;
+		padding: 10px 0;
+	}
+
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a,
+	.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	    box-sizing: border-box;
+	    color: rgb(255, 255, 255);
+	    display: block;
+	    height: 43px;
+	    position: relative;
+	    text-align: left;
+	    text-decoration: none;
+	    /*width: 190px;*/
+	    column-rule-color: rgb(255, 255, 255);
+	    perspective-origin: 95px 21.5px;
+	    transform-origin: 95px 21.5px;
+	    background: rgb(29, 136, 191) none repeat scroll 0% 0% / auto padding-box border-box;
+	    border: 0px none rgb(49, 163, 221);
+	    /*font: normal normal normal normal 14px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;*/
+	    list-style: none outside none;
+	    outline: rgb(255, 255, 255) none 0px;
+	    padding: 10px 20px;
+	    transition: all 0.1s ease-in-out 0s;
+	}
+
+	.nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover {
+		border: none;
+	}
+
+	.navbar-nav > .dropdown > .dropdown-menu,
+	.dropdown > ul
+	 {
+	    box-sizing: border-box;
+	    color: rgb(153, 153, 153);
+	    /* height: 307px; */
+	    /* left: 0px; */
+	    position: absolute;
+	    text-align: left;
+	    top: 40px ! important;
+	    /* width: 190px; */
+	    z-index: 99;
+	    column-rule-color: rgb(153, 153, 153);
+	    perspective-origin: 95px 153.5px;
+	    transform-origin: 95px 153.5px;
+	    background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
+	    border: 0px none rgb(153, 153, 153);
+	    border-radius: 2px 2px 2px 2px;
+	    /* font: normal normal normal normal 13.3px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial; */
+	    list-style: none outside none;
+	    margin: 10px 0px 0px;
+	    outline: rgb(153, 153, 153) none 0px;
+	    /* padding: 0px; */
+	}
+
+
+	.navbar-nav > .dropdown > .dropdown-menu:before {
+		box-sizing: border-box;
+		color: rgb(153, 153, 153);
+		content: '""';
+		display: block;
+		height: 5px;
+		left: 20px;
+		position: absolute;
+		text-align: left;
+		top: -5px;
+		width: 10px;
+		column-rule-color: rgb(153, 153, 153);
+		perspective-origin: 5px 2.5px;
+		transform-origin: 5px 2.5px;
+		border-top: 0px none rgb(153, 153, 153);
+		border-right: 5px solid rgba(0, 0, 0, 0);
+		border-bottom: 5px solid rgb(49, 163, 221);
+		border-left: 5px solid rgba(0, 0, 0, 0);
+		font: normal normal normal normal 13.3px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;
+		list-style: none outside none;
+		outline: rgb(153, 153, 153) none 0px;
+	}
+
+	.dropdown-menu > li {
+	    box-sizing: border-box;
+	    color: rgb(153, 153, 153);
+	    /*height: 44px;*/
+	    position: relative;
+	    /*width: 190px;*/
+	    column-rule-color: rgb(153, 153, 153);
+	    perspective-origin: 95px 22px;
+	    transform-origin: 95px 22px;
+	    border-top: 0px none rgb(153, 153, 153);
+	    border-right: 0px none rgb(153, 153, 153);
+	    border-bottom: 1px solid rgb(29, 136, 191);
+	    border-left: 0px none rgb(153, 153, 153);
+	    /*font: normal normal normal normal 13.3px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;*/
+	    list-style: none outside none;
+	    outline: rgb(153, 153, 153) none 0px;
+	}
+
+	.dropdown-menu > li > a {
+	    box-sizing: border-box;
+	    color: rgb(255, 255, 255);
+	    display: block;
+	    height: 43px;
+	    position: relative;
+	    text-align: left;
+	    text-decoration: none;
+	    /*width: 190px;*/
+	    column-rule-color: rgb(255, 255, 255);
+	    perspective-origin: 95px 21.5px;
+	    transform-origin: 95px 21.5px;
+	    border: 0px none rgb(255, 255, 255);
+	    border-radius: 2px 2px 0 0;
+	    /*font: normal normal normal normal 14px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;*/
+	    list-style: none outside none;
+	    outline: rgb(255, 255, 255) none 0px;
+	    padding: 10px 20px;
+	    transition: all 0.1s ease-in-out 0s;
+	}
+
+	.navbar .followus {
+		display: none;
+		float: right;
+		/*color: white;*/
+		margin-top: 15px;
+		margin-right: 10px;
+	}
+
+}
+
+/* if the minimum width is less than 768px bring the sandwhich menu bar */
+@media (min-width: 768px) {
+	.navbar-nav>li>a { 
+		padding-top: 30px ! important; 
+		padding-bottom: 30px ! important;
+		padding-left: 20px ! important;
+		padding-right: 20px ! important;
+	}
+
+	.navbar-brand { 
+		padding: 22px 15px ! important;
+	}
+
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+		/* box-sizing: border-box; */
+		color: rgb(255, 255, 255);
+		/* display: block; */
+		/* height: 50%; */
+		/* position: relative; */
+		/* text-align: left; */
+		/* text-decoration: none; */
+		/* width: 100%; */
+		/* column-rule-color: rgb(255, 255, 255); */
+		/* perspective-origin: 46.9063px 16.5px; */
+		/* transform-origin: 46.9063px 16.5px; */
+		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
+		border: 0px none rgb(49, 163, 221);
+		border-radius: 20px 20px 20px 20px;
+		/*font: normal normal normal normal 15px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;*/
+		list-style: none outside none;
+		/* outline: rgb(255, 255, 255) none 0px; */
+		padding: 4px 20px 6px;
+		transition: all 0.1s ease-in-out 0s;
+	}
+
+	.nav .open>a, .nav .open>a:hover, .nav.open>a:focus{
+		background-color: #446E9B;
+		border-color: #446E9B;
+		color: white;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+		color: rgb(255, 255, 255);
+		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
+		border: 0px none rgb(49, 163, 221);
+		border-radius: 20px 20px 20px 20px;		
+		list-style: none outside none;		
+		padding: 4px 20px 6px;
+		transition: all 0.1s ease-in-out 0s;
+	}
+
+	.navbar-collapse > ul {
+		margin-top: 30px !important;
+	}
+
+	.navbar-nav > li > a, .navbar-brand {
+		padding-top:5px !important;
+		padding-bottom:0 !important;
+		height: 30px;
+	}
+
+	.navbar {
+		min-height:90px !important;
+	}
+
+	.navbar-brand {
+		margin-top:15px !important;
+	}
+}

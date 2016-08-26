@@ -1,0 +1,105 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title> {{ this.page.title }} </title>
+
+	<!-- for da-slider fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- <link rel="stylesheet" type="text/css" href="{{ [
+		'assets/plugins/voltage/css/icomoon.css',
+		'assets/plugins/voltage/css/magnific-popup.css',
+		'assets/plugins/voltage/css/owl.carousel.min.css',
+		'assets/plugins/voltage/css/owl.theme.default.min.css',
+		'assets/plugins/bootstrap/css/bootstrap.min.css',
+		'assets/plugins/smartmenu/css/jquery.smartmenus.bootstrap.css',
+		'assets/plugins/animate/css/animate.css',
+		'assets/plugins/da-slider/css/da-slider.css',
+		'assets/plugins/voltage/css/cards.css',
+		'assets/css/bootstrap-override.css',
+		'assets/css/app.css',
+		'assets/css/products-tiles.css',
+		'assets/css/footer.css'
+	]|theme }}"> -->
+
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/voltage/css/icomoon.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/voltage/css/magnific-popup.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/voltage/css/owl.carousel.min.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/voltage/css/owl.theme.default.min.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/bootstrap/css/bootstrap.min.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/bootstrap/css/bootstrap-dialog.min.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/smartmenu/css/jquery.smartmenus.bootstrap.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/animate/css/animate.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/da-slider/css/da-slider.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/voltage/css/cards.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/tiles/css/demo.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/bootstrap-override.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/app.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/products-tiles.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/footer.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/team.css'|theme }}">
+	 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/font-awesome.css'|theme }}">
+	 	
+</head>
+
+<body>
+	<nav>
+		{% partial "nav" %}
+	</nav>
+
+	<main>
+		{% page %}
+	</main>
+
+	{% partial "footer" %}
+
+	<!-- <script type="text/javascript" src="{{ [
+		'assets/plugins/jquery/js/jquery.min.js',
+		'assets/plugins/bootstrap/js/bootstrap.min.js',
+		'assets/plugins/smartmenu/js/jquery.smartmenus.js',
+		'assets/plugins/smartmenu/js/jquery.smartmenus.bootstrap.js',
+		'assets/plugins/da-slider/js/modernizr.custom.28468.js',
+
+		'assets/plugins/voltage/js/modernizr-2.6.2.min.js',
+		'assets/plugins/voltage/js/jquery.easing.1.3.js',
+		'assets/plugins/voltage/js/jquery.waypoints.min.js',
+		'assets/plugins/voltage/js/owl.carousel.min.js',
+		'assets/plugins/voltage/js/jquery.magnific-popup.min.js',
+		'assets/plugins/voltage/js/jquery.stellar.min.js',
+		'assets/plugins/voltage/js/jquery.countTo.js',
+		'assets/plugins/voltage/js/wow.min.js',
+		'assets/plugins/voltage/js/main.js',
+		'assets/js/bootstrap-autohidingnavbar.min.js',
+		'assets/js/app.js'
+	]|theme }}"></script> -->
+
+	 <script src="{{ 'assets/plugins/jquery/js/jquery.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/bootstrap/js/bootstrap-dialog.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/smartmenu/js/jquery.smartmenus.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/smartmenu/js/jquery.smartmenus.bootstrap.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/da-slider/js/modernizr.custom.28468.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/da-slider/js/jquery.cslider.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/modernizr-2.6.2.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/jquery.easing.1.3.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/jquery.waypoints.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/owl.carousel.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/jquery.magnific-popup.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/jquery.stellar.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/jquery.countTo.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/wow.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/voltage/js/main.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/tiles/js/demo.js'|theme }}"></script>
+	 <script src="{{ 'assets/plugins/fluidvids/js/fluidvids.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/js/bootstrap-autohidingnavbar.min.js'|theme }}"></script>
+	 <script src="{{ 'assets/js/app.js'|theme }}"></script>
+
+	{% framework %}
+	{% framework extras %}
+	{% scripts %}
+</body>
+</html>

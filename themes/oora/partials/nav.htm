@@ -1,0 +1,60 @@
+<div>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"><img class="logo-image" style="margin-top: -9px;" src="{{ 'assets/images/logo2.png'|theme }}" alt="SiriAB" title="Wimera"></a>
+			</div>
+
+			<div class="navbar-collapse collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="active" id="nav-home"><a href="/">Home</a></li>
+
+					<li id="nav-whyhow"><a href="{{ 'whyhow'|page }}">Why & How</a></li>
+
+					<li id="nav-about-us"><a href="{{ 'aboutus'|page }}">About-Us</a></li>
+
+					<li class="dropdown" id="nav-products">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+
+							<li class="dropdown" id="nav-products">
+								<a href="" class="dropdown-toggle" data-toggle="dropdown">IT Management<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ 'services/inframanagement'|page }}">Infrastructure Management</a></li>
+									<li><a href="{{ 'services/erpsapr3'|page }}">ERP SAP/R3</a></li>
+								</ul>
+							</li>
+							<li class="dropdown" id="nav-products">
+								<a href="" class="dropdown-toggle" data-toggle="dropdown">Software Development<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ 'services/automotive'|page }}">Automotive</a></li>
+									<li><a href="{{ 'services/telecomwirelessiot'|page }}">Telecom Wireless IOT</a></li>
+								</ul>
+							</li>
+							<li class="dropdown" id="nav-products">
+								<a href="" class="dropdown-toggle" data-toggle="dropdown">Off-Shore Development<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ 'services/webdevelopment'|page }}">Web Development</a></li>
+									<li><a href="{{ 'services/mobilapplications'|page }}">Mobile Applications</a></li>
+									<li><a href="{{ 'services/iothwsw'|page }}">IOT HW/SW</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</li>
+
+					<li id="nav-careers"><a href="{{ 'careers'|page }}">Careers</a></li>
+
+					<li id="nav-contact-us"><a href="{{ 'contactus'|page }}">Contact Us</a></li>
+
+				</ul>
+			</div><!--/.nav-collapse -->
+
+		</div>
+	</div>
+</div>

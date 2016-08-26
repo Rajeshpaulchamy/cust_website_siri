@@ -1,0 +1,5 @@
+## Microsoft Dynamics
+
++ Microsoft Dynamics is an integrated, adaptable business management solution that automates and streamlines business processes, delivers robust reporting and business intelligence, and connects employees, customers, and partners across a global marketplace. Designed specifically for mid-sized organizations, it is flexible and easy to use and offers an intuitive user experience helping people to fuel business productivity and enabling people to make confident decisions and respond quickly to new marketplace opportunities.
++ Siri implements NAV Financial Management, Supply Chain Management, CRM, e-Business, Manufacturing and HRMS modules. We provide a single fully integrated solution that connects everyone in your organization to your customers, suppliers and partners through the internet anytime, anywhere.
++ Siri is confident that our team has the proven expertise to deliver industry-specific functionality relevant to your needs-even for the most highly specialized industries and organizations.

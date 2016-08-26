@@ -1,0 +1,168 @@
+/* css override class for crosscover */
+
+/* set the height limit; otherwise images will be scattered */
+.crosscover, .crosscover-list {
+	max-height: 1000px;
+}
+
+/* 
+ * to bring the carousel controls (prev, next, play/pause) 
+ * at the bottom of the screen; otherwise it will go down.
+ */
+.crosscover, .crosscover-list {
+	position: relative;
+	/*height: 90% ! important;*/
+}
+.crosscover-item {
+	/*height: 111% ! important;*/
+	/* the below is configuring the image width height inside the .crossover element */
+	background-size: 100% 140% ! important;	
+}
+
+/* remove the dark overlay */
+.crosscover-overlay {
+	background-color: rgba(0,0,0,0.2) !important;
+}
+
+/* carousel caption alignemnt */
+.crosscover-island {
+	text-align: left  !important;
+}
+.crosscover-title,
+.crosscover-description,
+.crosscover-button {
+	text-align: left  !important;
+	margin-left: 5% !important;
+}
+
+/* carousel caption animation */
+/* reference: https://github.com/daneden/animate.css */
+/* reference: http://daneden.github.io/animate.css/ */
+
+/* carousel caption decoration */
+.crosscover-title {
+	/*font-family: 'Open Sans';*/
+	/*font-size: 48px ! important;*/
+	/*font-weight: 800;*/
+	/*line-height: 60px;*/
+
+	letter-spacing: normal;
+	text-shadow: rgb(0, 0, 0) 3px 3px 3px;
+	margin-top: -10%;
+
+	/* configure animation */
+	-webkit-animation-duration: 5s;
+	/*-webkit-animation-delay: 2ms;*/
+	-webkit-animation-iteration-count: 1; /*infinite*/	
+}
+
+.crosscover-description {
+	/*font-family: 'Open Sans';*/
+	/*font-size: 28px ! important;*/
+	/*font-weight: 800;*/
+	/*line-height: 30px;*/
+	
+	letter-spacing: normal;
+	text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+	margin-top: -10%;
+
+	/* configure animation */
+	-webkit-animation-duration: 5s;
+	/*-webkit-animation-delay: 2ms;*/
+	-webkit-animation-iteration-count: 1; /*infinite*/	
+}
+
+.crosscover-island > h1{
+	font-size: 1.236em ! important;
+	line-height: 0.8em ! important;	
+}
+ 
+.crosscover-island > h2{
+	font-size: 1.0em ! important;	
+	line-height: 0.8em ! important;
+
+    /*background-color: rgba(0, 0, 0, 0.53);
+    padding: 10px;
+    display: inline;*/
+    letter-spacing: 0px;
+}
+ 
+.crosscover-island > h3{
+	font-size: 0.8em ! important;
+	line-height: 0.6em ! important;
+}
+ 
+.crosscover-island > p{
+	font-size: 0.5em ! important;
+	line-height: 1.64em ! important;
+
+    /*background-color: rgba(0, 0, 0, 0.53);
+    padding: 10px;
+    display: inline;*/
+
+}
+
+@media (max-width: 768px) {
+	.btn-responsive {
+		font-size: 0.5em ! important;
+		line-height: 1.64em ! important;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+	.btn-responsive {
+		font-size: 0.5em ! important;
+		line-height: 1.64em ! important;
+	}
+}
+
+/* configruation for media types */
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
+/* Smartphones (portrait) ---------- */
+@media screen and (max-width: 320px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
+/* Smartphones (landscape) ---------- */
+@media screen and (min-width: 321px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
+/* tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
+/* tablets, iPads (portrait) ---------- */
+@media screen and (min-width: 768px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
+/* tablets, iPads (landscape) ---------- */
+@media screen and (min-width: 1024px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
+/* Large screens ---------- */
+@media screen and (min-width: 1824px){
+	.crosscover-island {
+		 font-size: 3.2vw ! important;
+	}
+}
