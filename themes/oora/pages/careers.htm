@@ -46,7 +46,7 @@ function onSubmit()
 	} else {
 	    Log::info("Validation success");
 	    $data["filename"] = $filename;
-		Mail::send('laminsanneh.flexicontact::emails.message', $data, function($message) use ($data)
+		Mail::send('rajesh.email::mail.careers', $data, function($message) use ($data)
 		{
 		    Log::info("Validation Success");
 			$message->from("info@4techies.in", post('name'));
