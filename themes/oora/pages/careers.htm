@@ -4,7 +4,7 @@ layout = "oora"
 description = "Careers"
 is_hidden = 0
 ==
-
+<?php
 function onStart()
 {
     $filenames = array();
@@ -24,7 +24,10 @@ function onSubmit()
 	$data = Input::all();
 	$rules = ['name' => 'required|min:3', 'email' => 'required|email'];
 	$msgs = ['required' => 'This field is required', 'email' => 'Please enter a valid email'];
-	$resume = post('resume');
+    
+    $filename = Input::file('resume')->getClientOriginalName();
+    Log::info("File name" . $filename);
+
 	$errorMessages = "";
 
 	$v = Validator::make($data, $rules, $msgs);
@@ -35,25 +38,32 @@ function onSubmit()
 	{
 		$result = false;
 		$errorMessages = $v->messages();
+		Log::info("Validation failed");
 	} else {
-		Mail::send('laminsanneh.flexicontact::emails.message', $data, function($message)
+	    Log::info("Validation Success");
+	    $data["filename"] = $filename;
+		Mail::send('laminsanneh.flexicontact::emails.message', $data, function($message) use ($data)
 		{
-			$message->from(post('email'), post('name'));
+		    Log::info("Validation Success");
+			$message->from("info@4techies.in", post('name'));
 			$message->to('cleancode2015@gmail.com')->subject('JOB Request for:' . post('jobid'));
-			if (Input::hasFile('resume')) {
-				$message->attach( Input::file('resume') );
+			if (Request::hasFile('resume')) {
+			    Log::info("File attached");
+				$message->attach( Request::file('resume'), array('as' => $data["filename"]));
 			}
 		});
 
 		$result = true;
 	}
 
-	return [
+	/*return [
         'result' => $result,
         'message' => $errorMessages
-	];
+	];*/
+	
+	return Redirect::back();
 }
-
+?>
 ==
 <!-- **********************************************************
 				HEADER Content
@@ -124,7 +134,8 @@ function onSubmit()
 
 				<div id="careerform">
 					<h2> Apply for JOB: </h2>
-					<form class="form-horizontal" data-request="onSubmit" data-request-success="formSuccess(data)">
+					{{ form_open({'files': 'true', request: 'onSubmit'}) }}
+					<!--<form class="form-horizontal" data-request="onSubmit" data-request-success="formSuccess(data)">-->
 						<div class="form-group">
 							<label class="control-label col-sm-2" for="jobid">JOB ID:</label>
 							<div class="col-sm-10">
@@ -162,7 +173,9 @@ function onSubmit()
 								<button type="submit" class="btn btn-default">Submit</button>
 							</div>
 						</div>
-					</form>
+					<!--</form>-->
+					{{ form_close() }}
+
 				</div>
 
 			</div>
