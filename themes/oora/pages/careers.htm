@@ -22,11 +22,14 @@ function onSubmit()
 {
 	// Get fields
 	$data = Input::all();
-	$rules = ['name' => 'required|min:3', 'email' => 'required|email'];
+	$rules = ['resume' => 'required', 'name' => 'required|min:3', 'email' => 'required|email'];
 	$msgs = ['required' => 'This field is required', 'email' => 'Please enter a valid email'];
-    
-    $filename = Input::file('resume')->getClientOriginalName();
-    Log::info("File name" . $filename);
+	$filename = '';
+
+	if (Request::hasFile('resume')) {
+    	$filename = Input::file('resume')->getClientOriginalName();
+    	Log::info("File name" . $filename);
+	}
 
 	$errorMessages = "";
 
@@ -39,8 +42,9 @@ function onSubmit()
 		$result = false;
 		$errorMessages = $v->messages();
 		Log::info("Validation failed");
+
 	} else {
-	    Log::info("Validation Success");
+	    Log::info("Validation success");
 	    $data["filename"] = $filename;
 		Mail::send('laminsanneh.flexicontact::emails.message', $data, function($message) use ($data)
 		{
@@ -56,12 +60,13 @@ function onSubmit()
 		$result = true;
 	}
 
-	/*return [
+	$data = [
+		'fields' => Input::all(),
         'result' => $result,
         'message' => $errorMessages
-	];*/
-	
-	return Redirect::back();
+	];
+
+	$this["data"] = json_encode($data);
 }
 ?>
 ==
@@ -136,12 +141,12 @@ function onSubmit()
 					<h2> Apply for JOB: </h2>
 					{{ form_open({'files': 'true', request: 'onSubmit'}) }}
 					<!--<form class="form-horizontal" data-request="onSubmit" data-request-success="formSuccess(data)">-->
-						<div class="form-group">
+						<div id="group-jobid" class="form-group">
 							<label class="control-label col-sm-2" for="jobid">JOB ID:</label>
 							<div class="col-sm-10">
-								<select class="form-control" id="jobid">
+								<select class="form-control" name="jobid" id="jobid">
 									{% for filename in jobdescription %}
-										<option>
+										<option value=JOB{{ loop.index }}>
 									    	JOB{{ loop.index }}
 										</option>
 									{% endfor %}
@@ -162,10 +167,11 @@ function onSubmit()
 								<span class="help-block"></span>
 							</div>
 						</div>
-						<div class="form-group">
+						<div id="group-resume" class="form-group">
 							<label class="control-label col-sm-2" for="resume">File Upload:</label>
 							<div class="col-sm-10">
 								<input type="file" class="form-control" id="resume" name="resume" placeholder="Upload your resume">
+								<span class="help-block"></span>
 							</div>
 						</div>
 						<div class="form-group">
@@ -201,14 +207,26 @@ function onSubmit()
 
 	function formSuccess(data) {
 		console.log(data);
+
+		if(data) {
+			/* nothing to do */
+			$(window).scrollTop(500);
+		} else {
+			return;
+		}
+
 		if(data.result) {
 			console.log('form posted successfully.');
 			$("#careerform").hide();
 			$('#successform').css('display','block');
 		} else {
+			$("#group-jobid .form-control").val(data.fields.jobid);
+			$("#group-name .form-control").val(data.fields.name);
+			$("#group-email .form-control").val(data.fields.email);
 			if(data.message.name) {
 				$("#group-name").addClass('has-error');
 				$("#group-name .help-block").text(data.message.name[0]);
+				$("#group-name .form-control").value(data.fiedls.name);
 			} else {
 				$("#group-name").removeClass('has-error');
 				$("#group-name .help-block").text("");
@@ -221,10 +239,19 @@ function onSubmit()
 				$("#group-email").removeClass('has-error');
 				$("#group-email .help-block").text("");
 			}
+
+			if(data.message.resume) {
+				$("#group-resume").addClass('has-error');
+				$("#group-resume .help-block").text(data.message.resume[0]);
+			} else {
+				$("#group-resume").removeClass('has-error');
+				$("#group-resume .help-block").text("");
+			}
 		}
 	}
 
 	jQuery(document).ready(function($){
+		$('form').addClass('form-horizontal');
 
 		var table = $('.table-responsive').find('table');
 		table.attr('class', 'table table-hover table-striped table-bordered');
@@ -248,6 +275,10 @@ function onSubmit()
 
 		});
 
+			var data =  "{{ data }}";
+			if(data)
+				data = JSON.parse(data.replace(/&quot;/g,'"'));
+				formSuccess(data);
 	});
 	</script>
 {% endput %}
