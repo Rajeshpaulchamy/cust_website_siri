@@ -63,6 +63,7 @@ class Plugin extends PluginBase{
     {
         return [
             'rajesh.email::mail.careers' => 'rajesh.email::lang.strings.email_desc',
+            'rajesh.email::mail.contactus' => 'rajesh.email::lang.strings.email_desc'
         ];
     }
 }
