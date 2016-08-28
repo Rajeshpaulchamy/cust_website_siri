@@ -8,19 +8,99 @@
 	padding: 5px 0px 5px;
 }
 
-@media (min-width: 769px) {
+/*
+ * The below css code makes the navbar header background as plain white
+ * without any gradiants, if you just comment the below part of code the
+ * navbar background will become a gray gradiant background
+ */
+/*==========================================================================
+ * 							PART START
+ *==========================================================================*/
+.navbar-default {
+	font: normal normal normal normal 15px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;
+	/*background: rgba(22, 31, 37, 0.96);
+	color: #fff;*/
+	/*text-transform: uppercase;*/
+	border: none;
+	/*box-shadow: 0px 0px 1px rgba(0,0,0,0.9);*/
+	/*background-image: linear-gradient(to top, rgb(62, 86, 112) 0%, rgb(69, 94, 122) 100%)*/;
+	background: white ! important;
+	border-color: gray;
+	/*border-bottom: solid 1px;  */
+}
 
-	.navbar-default {
-		font: normal normal normal normal 15px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;
-		/*background: rgba(22, 31, 37, 0.96);
-		color: #fff;*/
-		/*text-transform: uppercase;*/
-		border: none;
-		/*box-shadow: 0px 0px 1px rgba(0,0,0,0.9);*/
-		/*background-image: linear-gradient(to top, rgb(62, 86, 112) 0%, rgb(69, 94, 122) 100%)*/;
-		background: white ! important;
-		border-color: gray;
-		/*border-bottom: solid 1px;  */  
+
+/*==========================================================================
+ * 							PART END
+ *==========================================================================*/
+
+/* if the minimum width is 1000px then application navbar will be applied */
+@media (min-width: 1000px) {
+	.navbar-nav>li>a {
+		padding-top: 30px ! important;
+		padding-bottom: 30px ! important;
+		padding-left: 20px ! important;
+		padding-right: 20px ! important;
+	}
+
+	.navbar-brand {
+		padding: 22px 15px ! important;
+	}
+
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+		/* box-sizing: border-box; */
+		color: rgb(255, 255, 255);
+		/* display: block; */
+		/* height: 50%; */
+		/* position: relative; */
+		/* text-align: left; */
+		/* text-decoration: none; */
+		/* width: 100%; */
+		/* column-rule-color: rgb(255, 255, 255); */
+		/* perspective-origin: 46.9063px 16.5px; */
+		/* transform-origin: 46.9063px 16.5px; */
+		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
+		border: 0px none rgb(49, 163, 221);
+		border-radius: 20px 20px 20px 20px;
+		/*font: normal normal normal normal 15px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;*/
+		list-style: none outside none;
+		/* outline: rgb(255, 255, 255) none 0px; */
+		padding: 4px 20px 6px;
+		transition: all 0.1s ease-in-out 0s;
+	}
+
+	.nav .open>a, .nav .open>a:hover, .nav.open>a:focus{
+		background-color: #446E9B;
+		border-color: #446E9B;
+		color: white;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+		color: rgb(255, 255, 255);
+		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
+		border: 0px none rgb(49, 163, 221);
+		border-radius: 20px 20px 20px 20px;
+		list-style: none outside none;
+		padding: 4px 20px 6px;
+		transition: all 0.1s ease-in-out 0s;
+	}
+
+	.navbar-collapse > ul {
+		margin-top: 30px !important;
+	}
+
+	.navbar-nav > li > a, .navbar-brand {
+		padding-top:5px !important;
+		padding-bottom:0 !important;
+		height: 30px;
+	}
+
+	.navbar {
+		min-height:90px !important;
+	}
+
+	.navbar-brand {
+		margin-top:15px !important;
 	}
 
 	.navbar-default .navbar-nav > .dropdown > a .caret,
@@ -64,8 +144,8 @@
 		color: rgb(255, 255, 255);
 		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
 		border: 0px none rgb(49, 163, 221);
-		border-radius: 20px 20px 20px 20px;		
-		list-style: none outside none;		
+		border-radius: 20px 20px 20px 20px;
+		list-style: none outside none;
 		/*padding: 4px 20px 6px;*/
 		transition: all 0.1s ease-in-out 0s;
 	}
@@ -200,72 +280,147 @@
 
 }
 
-/* if the minimum width is less than 768px bring the sandwhich menu bar */
-@media (min-width: 768px) {
-	.navbar-nav>li>a { 
-		padding-top: 30px ! important; 
-		padding-bottom: 30px ! important;
-		padding-left: 20px ! important;
-		padding-right: 20px ! important;
-	}
 
-	.navbar-brand { 
-		padding: 22px 15px ! important;
-	}
+/* The below css code is bootstap navbar breakpoint */
+/*==========================================================================
+ * 							PART START
+ *==========================================================================*/
 
-	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-		/* box-sizing: border-box; */
-		color: rgb(255, 255, 255);
-		/* display: block; */
-		/* height: 50%; */
-		/* position: relative; */
-		/* text-align: left; */
-		/* text-decoration: none; */
-		/* width: 100%; */
-		/* column-rule-color: rgb(255, 255, 255); */
-		/* perspective-origin: 46.9063px 16.5px; */
-		/* transform-origin: 46.9063px 16.5px; */
-		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
-		border: 0px none rgb(49, 163, 221);
-		border-radius: 20px 20px 20px 20px;
-		/*font: normal normal normal normal 15px / 23px 'Open Sans', 'Helvetica Neue', Helvetica, Arial;*/
-		list-style: none outside none;
-		/* outline: rgb(255, 255, 255) none 0px; */
-		padding: 4px 20px 6px;
-		transition: all 0.1s ease-in-out 0s;
+@media (max-width: 999px) {
+	.navbar-header {
+	    float: none;
 	}
-
-	.nav .open>a, .nav .open>a:hover, .nav.open>a:focus{
-		background-color: #446E9B;
-		border-color: #446E9B;
-		color: white;
+	.navbar-left,.navbar-right {
+	    float: none !important;
 	}
-
-	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-		color: rgb(255, 255, 255);
-		background: rgb(49, 163, 221) none repeat scroll 0% 0% / auto padding-box border-box;
-		border: 0px none rgb(49, 163, 221);
-		border-radius: 20px 20px 20px 20px;		
-		list-style: none outside none;		
-		padding: 4px 20px 6px;
-		transition: all 0.1s ease-in-out 0s;
+	.navbar-toggle {
+	    display: block;
 	}
-
-	.navbar-collapse > ul {
-		margin-top: 30px !important;
+	.navbar-collapse {
+	    border-top: 1px solid transparent;
+	    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 	}
-
-	.navbar-nav > li > a, .navbar-brand {
-		padding-top:5px !important;
-		padding-bottom:0 !important;
-		height: 30px;
+	.navbar-fixed-top {
+	    top: 0;
+	    border-width: 0 0 1px;
 	}
-
-	.navbar {
-		min-height:90px !important;
+	.navbar-collapse.collapse {
+	    display: none!important;
 	}
-
-	.navbar-brand {
-		margin-top:15px !important;
+	.navbar-nav {
+	    float: none!important;
+	    margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+	    float: none;
+	}
+	.navbar-nav>li>a {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+	.collapse.in{
+	    display:block !important;
 	}
 }
+
+/*@media (min-width: 999px) {
+	.navbar-collapse {
+		float: left;
+	}
+}*/
+
+/*==========================================================================
+ * 							PART END
+ *==========================================================================*/
+
+/* The below css code design the navbar in sandwitch mode   */
+/*==========================================================================
+ * 							PART START
+ *==========================================================================*/
+
+@media (max-width: 999px) {
+	body {
+		padding-top: 50px;
+	}
+
+	.navbar-fixed-top {
+		/* commented the below code to fix the menu at top during scroll in mobile view */
+		/*position: initial;*/
+	}
+
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #fff;
+	}
+
+	.navbar-collapse {
+		background: #000;
+		color: #fff;
+	}
+
+	.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		background: rgba(255,255,255,.2);
+		color: #fff;
+		height: auto;
+	}
+
+	.navbar-fixed-top > .container {
+		position: relative;
+	}
+
+	.navbar > .container .navbar-brand {
+		margin-left: 15px;
+	}
+
+	.navbar .socialbuttons {
+		position: absolute;
+		right: 100px;
+		top: 0;
+		width: 200px;
+		margin-top: 12px;
+	}
+}
+/*==========================================================================
+ * 							PART END
+ *==========================================================================*/
+
+
+/*
+ * the below css code defines the logo size and position
+ * in normal mode, sandwitch mode and etc.,
+ */
+/*==========================================================================
+ * 							PART START
+ *==========================================================================*/
+
+/* logo image size */
+.logo-image {
+	width: 200px;
+	max-height: 57px;
+	padding: 5px;
+}
+/* if the minimum width is less than 768px bring the sandwhich menu bar */
+@media (min-width: 999px) {
+	/* logo image size */
+	.logo-image {
+		max-height: 90px;
+		/* added to retain the menu poistion (not down to logo) in normal mode (not mobile mode)*/
+		max-width: 160px;
+		margin-top: -20px;
+	}
+}
+
+@media (max-width: 425px)  and (min-width: 279px) {
+	/* logo image size */
+	.logo-image {
+		margin-top: -9px;
+		max-height: 57px;
+	}
+}
+/*==========================================================================
+ * 							PART END
+ *==========================================================================*/
+
+
+

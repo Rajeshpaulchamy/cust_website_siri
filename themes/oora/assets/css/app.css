@@ -271,59 +271,10 @@ footer ul li {
 	color: #333;
 }
 
-@media (min-width: 768px) {
-	.navbar-collapse {
-		float: left;
-	}
-}
 
 @media (max-width: 1000px) {
 	.navbar .followus {
 		display: none;
-	}
-}
-
-@media (max-width: 767px) {
-	body {
-		padding-top: 50px;
-	}
-
-	.navbar-fixed-top {
-		/* commented the below code to fix the menu at top during scroll in mobile view */
-		/*position: initial;*/
-	}
-
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-		color: #fff;
-	}
-
-	.navbar-collapse {
-		background: #000;
-		color: #fff;
-	}
-
-	.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle,
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-		background: rgba(255,255,255,.2);
-		color: #fff;
-		height: auto;
-	}
-
-	.navbar-fixed-top > .container {
-		position: relative;
-	}
-
-	.navbar > .container .navbar-brand {
-		margin-left: 15px;
-	}
-
-	.navbar .socialbuttons {
-		position: absolute;
-		right: 100px;
-		top: 0;
-		width: 200px;
-		margin-top: 12px;
 	}
 }
 
@@ -551,31 +502,6 @@ h4, h5, h6 {
 	min-height: 90px;
 }
 
-
-/* logo image size */
-.logo-image {
-	width: 200px;
-	max-height: 57px;
-	padding: 5px;
-}
-/* if the minimum width is less than 768px bring the sandwhich menu bar */
-@media (min-width: 768px) {
-	/* logo image size */
-	.logo-image {
-		max-height: 90px;
-		/* added to retain the menu poistion (not down to logo) in normal mode (not mobile mode)*/
-		max-width: 160px;
-		margin-top: -20px;
-	}
-}
-
-@media (max-width: 425px)  and (min-width: 279px) {
-	/* logo image size */
-	.logo-image {
-		margin-top: -9px;
-		max-height: 57px;
-	}
-}
 
 .boot-grid-image {
 	background-position: center center;
