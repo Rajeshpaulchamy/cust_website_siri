@@ -55,7 +55,11 @@ h2 {
 
 h3 {
 	font-family: "Century Gothic", Arial, 'PT Sans', Ubuntu, Helvetica, sans-serif;
-	margin-top: 25px;
+	/*
+	 * the below code commented, it is causing the alignemnt issue in
+	 * whyhow page in mobile mode
+	 */
+	/* margin-top: 25px; */
 	font-weight: bold;
 }
 
@@ -738,7 +742,9 @@ h4, h5, h6 {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	/* changed to 100% 100% after that the images are properly displayed multiple media */
+	/*background-size: cover;*/
+    background-size: 100% 100%;
 }
 
 .brightFont,
@@ -747,3 +753,24 @@ h4, h5, h6 {
 .brightFont p  {
 	color: #FFFFFF ! important;
 }
+
+
+/*
+ * alignment for whyhow page h3 and p tags
+ */
+
+.whyhowheader {
+	padding: 20px 0 20px 0;
+}
+
+.whyhowpara {
+	padding: 0px 10px;
+}
+
+.whyhowOnlyHeader {
+	padding: 30px 0 0 0;
+}
+
+
+
+
