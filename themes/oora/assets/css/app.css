@@ -768,9 +768,13 @@ h4, h5, h6 {
 }
 
 .whyhowOnlyHeader {
-	padding: 30px 0 0 0;
+	padding: 17px 0 0 0;
 }
 
-
-
+/* below code added to set the '0' margin for h3, otherwise in mobile mode gap occurs between the rows in whyhow page "How we do it"  */
+@media (max-width: 999px) {
+	h1, h2, h3, h4, h5, h6 {
+	  margin: 0 0 0px 0;
+	}
+}
 
