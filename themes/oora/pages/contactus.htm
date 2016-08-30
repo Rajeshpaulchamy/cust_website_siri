@@ -29,7 +29,7 @@ function onSubmit()
 		Mail::send('rajesh.email::mail.contactus', $data, function($message) use ($data)
 		{
 			$message->from("info@4techies.in", post('name'));
-			$message->to('cleancode2015@gmail.com')->subject('Contact Us');
+			$message->to('info@siriab.se')->subject('Contact Us');
 		});
 
 		$result = true;
