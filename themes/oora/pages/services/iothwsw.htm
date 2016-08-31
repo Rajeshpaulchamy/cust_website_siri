@@ -5,8 +5,40 @@ description = "IOT HW/SW"
 is_hidden = 0
 ==
 
+{% put styles %}
+	<style>
+
+		.well {
+			/* padding: 19px; */
+			background-color: rgba(0, 0, 0, 0.75);
+			border: 1px solid #e3e3e3;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+			margin: 20px;
+		}
+
+		.page-banner-fullsize {
+			background-size: 100% 100%;
+			height: 500px ! important;
+		}
+
+		.well >	h3 {
+			color: #FFF;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin: 0px;
+		}
+
+		.well >	ul > li {
+			color: #FFF;
+		}
+
+	</style>
+{% endput %}
+
 <!-- **********************************************************
-	 			HEADER Content 
+	 			HEADER Content
 	 ********************************************************** -->
 <div class="container-fluid" style="background-color: #414547;">
 	<div class="container">
@@ -25,7 +57,7 @@ is_hidden = 0
 
 
 <!-- **********************************************************
-	 			BODY Content 
+	 			BODY Content
 	 ********************************************************** -->
 <div class="container">
 	<div id="content">
@@ -38,14 +70,47 @@ is_hidden = 0
 	</div>
 </div>
 
-<div class="wow fadeInUp container-fluid page-banner-fullsize" style="background-image: url({{ 'assets/images/iothwsw/iot.png'|theme }});" data-wow-duration="1s" data-wow-delay="1.4s" data-stellar-background-ratio="0.5">
+<div class="container-fluid page-banner-fullsize" style="background-image: url({{ 'assets/images/iothwsw/fullscreen_iot_hand.jpg'|theme }});">
+</div>
+
+<div class="wow fadeInUp container" data-wow-duration="1s" data-wow-delay="0.4s" data-stellar-background-ratio="0.5">
+	<div id="content">
 		<!-- screen content -->
-		<div class="row page-content1-bg">
-			<div class="col-lg-6 page-content1-left-side vcenter" style="background-color: rgba(34, 33, 37, 0.7);">
-				{% content 'iothwsw/content2.md' %}
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="well" style="background-image: url({{ 'assets/images/iothwsw/well_design_house.jpg'|theme }});  background-size: 100% 100%">
+					{% content 'iothwsw/content2.md' %}
+				</div>
 			</div>
-			<div class="col-lg-6 page-content-right-side">
+			<div class="col-lg-12">
+				<div class="well" style="background-image: url({{ 'assets/images/iothwsw/well_software.jpg'|theme }});  background-size: 100% 100%">
+					{% content 'iothwsw/content3.md' %}
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="well" style="background-image: url({{ 'assets/images/iothwsw/well_communication.jpg'|theme }});  background-size: 100% 100%">
+					{% content 'iothwsw/content4.md' %}
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="well" style="background-image: url({{ 'assets/images/iothwsw/well_iot.jpg'|theme }});  background-size: 100% 100%">
+					{% content 'iothwsw/content5.md' %}
+				</div>
 			</div>
 		</div>
+	</div>
 </div>
+
+
+<div class="wow fadeInUp container" data-wow-duration="1s" data-wow-delay="0.4s" data-stellar-background-ratio="0.5">
+	<div id="content">
+		<!-- screen content -->
+		<div class="row">
+			<div class="col-lg-12">
+				{% content 'iothwsw/content6.md' %}
+			</div>
+		</div>
+	</div>
+</div>
+
 
