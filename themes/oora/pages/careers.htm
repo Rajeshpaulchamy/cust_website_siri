@@ -50,7 +50,7 @@ function onSubmit()
 		{
 		    Log::info("Validation Success");
 			$message->from("info@4techies.in", post('name'));
-			$message->to('info@siriab.se')->subject('JOB Request for:' . post('jobid'));
+			$message->to('hr@siriab.se')->subject('JOB Request for:' . post('jobid'));
 			if (Request::hasFile('resume')) {
 			    Log::info("File attached");
 				$message->attach( Request::file('resume'), array('as' => $data["filename"]));
