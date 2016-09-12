@@ -975,7 +975,7 @@ a:hover .lnk-icon-right {
 .fh5co-project-style-2,
 .fh5co-project-style-3,
 .fh5co-project-style-4 {
-  padding: 5em 0;
+  /*padding: 5em 0;*/
 }
 @media screen and (max-width: 768px) {
   .fh5co-project-style-1,
@@ -1835,7 +1835,7 @@ a:hover .lnk-icon-right {
 .fh5co-features-style-3,
 .fh5co-features-style-4,
 .fh5co-features-style-5 {
-  padding: 5em 0;
+  /*padding: 5em 0;*/
 }
 @media screen and (max-width: 768px) {
   .fh5co-features-style-1,
@@ -2203,7 +2203,7 @@ a:hover .lnk-icon-right {
 */
 /* BLOG STYLE #1 */
 .fh5co-blog-style-1 {
-  padding: 7em 0;
+  /*padding: 7em 0;*/
   background: #fff;
 }
 @media screen and (max-width: 768px) {
@@ -2965,7 +2965,7 @@ a:hover .lnk-icon-right {
 */
 .fh5co-testimonial-style-1,
 .fh5co-testimonial-style-2 {
-  padding: 5em 0;
+  /*padding: 5em 0;*/
 }
 @media screen and (max-width: 768px) {
   .fh5co-testimonial-style-1,

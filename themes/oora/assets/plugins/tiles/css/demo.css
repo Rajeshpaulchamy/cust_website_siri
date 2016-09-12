@@ -103,13 +103,13 @@
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	
+
 	color: #fff;
 }
 
 h3.card__text {
 	min-height: 40px;
-	height: 40px;	
+	height: 40px;
 	text-shadow: rgb(0, 0, 0) 3px 3px 3px;
 	background-color: rgba(0, 0, 0, 0.75);
 }
@@ -117,8 +117,8 @@ h3.card__text {
 p.card__text {
 	min-height: 100px;
 	height: 100px;
-	font-family: Courier;
-	font-size: 19px;	
+	/*font-family: Courier;*/
+	font-size: 19px;
 }
 
 
